@@ -92,9 +92,10 @@ best results).
 
 ### Getting Started with Tim (Product Manager)
 
-The author has found that the AI is more likely to provide a useful response if the request for work item definition is:
+The author has found that the AI is more likely to provide a useful response if the request for work item definition or
+review is:
 - Well-formatted;
-- Specific and detailed;
+- Specific and detailed--be sure to mention frameworks like SAFe or practices like TDD or BDD;
 - Includes all necessary information;
 - Uses domain-appropriate and precise, professional language in formal register; and
 - Well-structured, organised, clear, and concise with a logical flow.
