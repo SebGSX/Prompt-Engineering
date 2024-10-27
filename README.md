@@ -4,8 +4,8 @@
 
 This project is a production-ready implementation of two prompts that are used to configure ChatGPT to serve as a 
 principal developer for pull request review support 
-([Tom](https://github.com/SebGSX/Utilities/blob/main/prompt-engineering/pull-request-review.md)) and a product manager
-([Tim](https://www.promptingguide.ai/)). The prompts have been exhaustively developed and tested over a period of about a year. 
+([Tom](https://github.com/SebGSX/Prompt-Engineering/blob/main/prompt-engineering/pull-request-review.md)) and a product 
+manager ([Tim](https://github.com/SebGSX/Prompt-Engineering/blob/main/prompt-engineering/work-item-review.md)). The prompts have been exhaustively developed and tested over a period of about a year. 
 
 While creating Tim was relatively straightforward, creating Tom was a highly complex proposition that required a 
 suitably complex codebase upon which to "train" Tom. By train, I mean activate the prompt, provide Tom with code, 
