@@ -3,10 +3,18 @@
 ## Overview
 
 This project is a production-ready implementation of two prompts that are used to configure ChatGPT to serve as a
-principal developer for pull request review support
+principal developer for pull request review support 
 ([Tom](https://github.com/SebGSX/Prompt-Engineering/blob/main/prompt-engineering/pull-request-review.md)) and a product
 manager ([Tim](https://github.com/SebGSX/Prompt-Engineering/blob/main/prompt-engineering/work-item-review.md)). The
 prompts have been exhaustively developed and tested over a period of about a year.
+
+### Objective
+
+The primary objective of the project is to accelerate the delivery of high-quality work product. In other words, 
+faster and higher quality first drafts of work, faster and higher quality reviews, and faster and higher quality
+feedback, so that work flows more smoothly through the system.
+
+### General Notes on Use
 
 While creating Tim was relatively straightforward, creating Tom was a highly complex proposition that required a
 suitably complex codebase upon which to "train" Tom. By train, I mean activate the prompt, provide Tom with code,
@@ -119,5 +127,5 @@ The project is licensed under the MIT License. Please see the `LICENSE` file for
 ## Further Development
 
 The author actively uses both prompts for all product and software engineering activities. As such, the prompts are
-constantly in use and will evolve. Additional prompts are planned, including a prompt for a technical writer to
+constantly in use and will evolve. Additional prompts are planned, including a prompt for a technical writer ("Tam") to
 support documentation efforts.
