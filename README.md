@@ -64,8 +64,9 @@ The author has found that the AI is more likely to provide a useful response if 
 - Free of syntax errors;
 - Complete, as in share the entire file or files that are to be reviewed;
 - Clearly documented and annotated using domain-appropriate and precise, professional language in formal register;
-- Applicable coding standards and conventions are followed; and
-- Naming of namespaces, classes, methods, fields, properties, constants, and variables are meaningful and descriptive.
+- Compliant with applicable coding standards and conventions; and
+- Mindful of naming such as the naming of namespaces, classes, methods, fields, properties, constants, and variables 
+  are meaningful and descriptive.
 
 > **Note:** The guidance above can be generalised to any technical prompt for best results.
 
@@ -84,7 +85,7 @@ The author has found that the AI is more likely to provide a useful response if 
 - Specific and detailed;
 - Includes all necessary information;
 - Uses domain-appropriate and precise, professional language in formal register; and
-- Is clear and concise.
+- Well-structured, organised, clear, and concise with a logical flow.
 
 > **Note:** The guidance above can be generalised to any non-technical prompt for best results.
 
