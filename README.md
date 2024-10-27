@@ -5,14 +5,23 @@
 This project is a production-ready implementation of two prompts that are used to configure ChatGPT to serve as a 
 principal developer for pull request review support 
 ([Tom](https://github.com/SebGSX/Prompt-Engineering/blob/main/prompt-engineering/pull-request-review.md)) and a product 
-manager ([Tim](https://github.com/SebGSX/Prompt-Engineering/blob/main/prompt-engineering/work-item-review.md)). The prompts have been exhaustively developed and tested over a period of about a year. 
+manager ([Tim](https://github.com/SebGSX/Prompt-Engineering/blob/main/prompt-engineering/work-item-review.md)). The
+prompts have been exhaustively developed and tested over a period of about a year. 
 
 While creating Tim was relatively straightforward, creating Tom was a highly complex proposition that required a 
 suitably complex codebase upon which to "train" Tom. By train, I mean activate the prompt, provide Tom with code, 
 then carefully review the output. The author thus created a multi-threaded listener using lock primitives to help 
-ensure that Tom had a sufficiently complex problem to solve. As the code evolved, so too did the prompt. The result 
-is a prompt that renders the latest model of ChatGPT as a highly capable principal developer adept at analysing 
-codded solutions irrespective of the language, frameworks, or packages used.
+ensure that Tom had a sufficiently complex problem to solve. As the code evolved, so too did the prompt.
+
+> For reference, the author has included the codebase (with tests) used to train Tom in the `src` and `test` directories
+> of this repository, respectively.
+
+The result is a prompt that renders the latest model of ChatGPT as a highly capable principal developer adept at
+analysing codded solutions irrespective of the language, frameworks, or packages used.
+
+> **Important:** No AI is perfect. The AI cannot and does not replace the judgement of a human. Used as a very
+> intelligent and knowledgeable assistant, the AI can be a powerful accelerator of work. That said, the user is
+> ultimately accountable and responsible for the use of the AI and its outputs. 
 
 ### AI Custom Instructions (Standing Instructions)
 
@@ -22,8 +31,7 @@ of standing instructions that are used to guide the AI in its all of its respons
 that more accurate and in-depth responses are generated.
 
 The author has experimented with a variety of custom instructions over the past year to 18 months and has found that the
-set provided within the [AI Custom Instructions](https://github.com/SebGSX/AI-Custom-Instructions) repository is the
-most effective.
+set provided within the [AI Custom Instructions](https://github.com/SebGSX/AI-Custom-Instructions) repository is the most effective.
 
 > **Note:** The custom instructions do evolve and are thus subject to change. Given the experimental nature of the work 
 > the custom instructions are sometimes suboptimal and may contain errors or out-of-the-box thinking.
@@ -49,26 +57,48 @@ without needing to train a model from scratch or fine-tune an existing one.
 
 ### Getting Started with Tom (Principal Developer)
 
-For a quick five-minute introduction to Tom, the principal developer, see the video:
-[AI Pull Request Reviewer](https://rumble.com/v5j1zrx-ai-pull-request-reviewer.html?e9s=src_v1_ucp).
+For a quick five-minute introduction to Tom, the principal developer, see the video: [AI Pull Request Reviewer](https://rumble.com/v5j1zrx-ai-pull-request-reviewer.html?e9s=src_v1_ucp).
 
 The author has found that the AI is more likely to provide a useful response if the code is: 
 - Well-formatted;
+- Free of syntax errors;
+- Complete, as in share the entire file or files that are to be reviewed;
 - Clearly documented and annotated using domain-appropriate and precise, professional language in formal register;
 - Applicable coding standards and conventions are followed; and
 - Naming of namespaces, classes, methods, fields, properties, constants, and variables are meaningful and descriptive.
 
 > **Note:** The guidance above can be generalised to any technical prompt for best results.
 
+Using the chat window, Tom can be used as a pre-commit reviewer, a post-commit reviewer, or as a reviewer of a proposed
+change. Using the API, Tom can be integrated directly in the CI/CD pipeline to provide real-time feedback on proposed
+changes.
+
 ### Getting Started with Tim (Product Manager)
 
 The author has found that the AI is more likely to provide a useful response if the request for work item definition is:
 - Well-formatted;
 - Specific and detailed;
+- Includes all necessary information;
 - Uses domain-appropriate and precise, professional language in formal register; and
 - Is clear and concise.
 
 > **Note:** The guidance above can be generalised to any non-technical prompt for best results.
+
+Using the chat window, Tim can be used to define work items--including business cases, non-functional requirements,
+acceptance criteria (such as Gherkin), and more. An advanced approach is to use software such as [n8n](https://n8n.io/)
+to automate the creation of work items using Tim, then have n8n create the work items in the underlying system.
+
+Tim can be used to prepare work items for input from the product management team, then refinement in ceremonies such as
+the three amigos, backlog grooming, sprint planning, and more. Ideally, product managers should discuss product ideas
+with stakeholders, distill such conversations into a set of "I can <some-action> so that <some-benefit>" statements,
+then use Tim to create the work items. Tim can also be used to review work items for completeness, correctness, and
+compliance with applicable standards.
+
+A final use-case for Tim is to back-fill work items for legacy systems or to create work items for systems that have
+been developed without the benefit of a product manager. Doing so can help to ensure that the system is well-documented
+and well-understood, guarding against issue regression and loss of knowledge. Back-filling work items is also a key
+concern when implementing behaviour-driven development (BDD) or test-driven development (TDD) practices because the
+team needs to have a clear understanding of the system's required behaviour and functionality.
 
 ## Contributing
 
