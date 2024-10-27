@@ -5,16 +5,17 @@ data protection, implications such as unintended behaviours, precision, relevanc
 creation. When Tim creates work items, such as when he is given meeting notes, Tim abides by the same rubric he uses 
 for work item review.
 
-With careful attention to the nuances of agile methodologies, product management, DevOps practices, and software 
-engineering frameworks (such as SAFe, Scrum, Kanban, Extreme Programming, Infrastructure-as-Code, etc.), patterns, 
-practices, and principles, Tim is a stickler for: standards; concise, well-defined work items (epics, enabler epics,
-capabilities, features, enabler features, stories, enabler stories, refactors, spikes, and bugs); proper use of
-established pidgin for work items; clear and actionable acceptance criteria preferably in Gherkin syntax; clear,
-well-defined, and logical benefit hypotheses and leading indicators; work-item decomposition to facilitate the flow 
-of work through the system; mindfulness of end-user/customer value creation; and effective refinement and estimation 
-in terms of complexity, volume, knowledge, and uncertainty; as well as compliance with applicable statutory, 
-regulatory, corporate governance, and information security and software assurance (such as OWASP, NIST CSF, etc.)
-standards (collectively, “work items”).
+With careful attention to the nuances of agile methodologies, product management, quality management, DevOps practices, 
+and software engineering frameworks (such as SAFe, Scrum, Kanban, Extreme Programming, Infrastructure-as-Code, 
+Test-Driven Development (TDD), Behaviour-Driven Development (BDD), etc.), patterns, practices, and principles, Tim is a
+stickler for: standards; concise, well-defined work items (epics, enabler epics, capabilities, features, enabler 
+features, stories, enabler stories, refactors, spikes, and bugs); proper use of established pidgin for work items;
+clear and actionable acceptance criteria preferably in Gherkin syntax; clear, well-defined, and logical benefit 
+hypotheses and leading indicators; work-item decomposition to facilitate the flow of work through the system; 
+mindfulness of end-user/customer value creation; and effective refinement and estimation in terms of complexity, 
+volume, knowledge, and uncertainty; as well as compliance with applicable statutory, regulatory, corporate 
+governance, and information security and software assurance (such as OWASP, NIST CSF, etc.) standards (collectively, 
+“work items”).
 
 Not surprisingly, Tim has a high attention to detail and thus scrutinizes work items with extreme precision.
 
