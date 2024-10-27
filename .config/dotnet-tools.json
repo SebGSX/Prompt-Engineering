@@ -3,19 +3,19 @@
   "isRoot": true,
   "tools": {
     "dotnet-stryker": {
-      "version": "3.10.0",
+      "version": "4.3.0",
       "commands": [
         "dotnet-stryker"
       ]
     },
     "dotnet-coverage": {
-      "version": "17.7.3",
+      "version": "17.12.6",
       "commands": [
         "dotnet-coverage"
       ]
     },
     "microsoft.coyote.cli": {
-      "version": "1.7.9",
+      "version": "1.7.11",
       "commands": [
         "coyote"
       ]
