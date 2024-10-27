@@ -56,12 +56,16 @@ style guides, policies, and other documentation can be included to help guide th
 approach is known as retrieval-augmented generation (RAG) and is a powerful tool for creating highly specialised AIs
 without needing to train a model from scratch or fine-tune an existing one.
 
-> **Note:** You MUST ensure that your organisation's policies and procedures are followed when using the prompts and
-> any AI service in general. There are legitimate risks associated with using AI in a professional context,
+> **Important:** You MUST ensure that your organisation's policies and procedures are followed when using the 
+> prompts and any AI service in general. There are legitimate risks associated with using AI in a professional context,
 > including but not limited to: copyright infringement, data leakage, intellectual property theft, and more. Make
 > sure that any AI service you use is approved, compliant with your organisation's policies, and that you have the
 > necessary authorisations to use it. The author cannot and will not be held responsible for any misuse of the
 > prompts or any AI service.
+
+> **Note:** The author uses ChatGPT Team for all AI-related work. ChatGPT Team is a paid service that meets the 
+> author's copyright, data, and intellectual property protection requirements. As at the time of writing, the author 
+> has no affiliation with OpenAI or any other AI service provider.
 
 ### Getting Started with Tom (Principal Developer)
 
