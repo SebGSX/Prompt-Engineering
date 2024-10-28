@@ -69,7 +69,9 @@ without needing to train a model from scratch or fine-tune an existing one.
 
 ### Getting Started with Tom (Principal Developer)
 
-For a quick five-minute introduction to Tom, the principal developer, see the video: [AI Pull Request Reviewer](https://rumble.com/v5j1zrx-ai-pull-request-reviewer.html?e9s=src_v1_ucp).
+For a quick five-minute introduction to Tom, the principal developer, see the video below.
+
+[![AI Pull Request Reviewer](content/Thumbnail.jpg)](https://rumble.com/v5j1zrx-ai-pull-request-reviewer.html)
 
 The author has found that the AI is more likely to provide a useful response if the code is:
 - Well-formatted;
