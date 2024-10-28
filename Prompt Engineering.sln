@@ -29,8 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prompt-engineering", "promp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{E4167520-242B-4B83-B637-0015E29433B8}"
 	ProjectSection(SolutionItems) = preProject
-		content\Thumbnail.jpg = content\Thumbnail.jpg
 		content\Handwritten-Note.png = content\Handwritten-Note.png
+		content\Thumbnail-Tim.jpg = content\Thumbnail-Tim.jpg
 	EndProjectSection
 EndProject
 Global

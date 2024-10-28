@@ -71,7 +71,7 @@ without needing to train a model from scratch or fine-tune an existing one.
 
 For a quick five-minute introduction to Tom, the AI principal developer, see the video below.
 
-[![AI Pull Request Reviewer](content/Thumbnail.jpg "AI Pull Request Reviewer")](https://rumble.com/v5j1zrx-ai-pull-request-reviewer.html)
+[![AI Pull Request Reviewer](content/Thumbnail-Tom.jpg "AI Pull Request Reviewer")](https://rumble.com/v5j1zrx-ai-pull-request-reviewer.html)
 
 The author has found that the AI is more likely to provide a useful response if the code is:
 - Well-formatted;
@@ -101,6 +101,10 @@ For convenience, the link to the exact file demonstrated in the video is provide
 [ListenerThread.cs](https://github.com/SebGSX/Prompt-Engineering/blob/main/src/OptimizedInternals/Threading/ListenerThread.cs).
 
 ### Getting Started with Tim (Product Manager)
+
+For a quick eight-minute introduction to Tim, the AI product manager, see the video below.
+
+[![Accelerating Product Management with AI](content/Thumbnail-Tim.jpg "Accelerating Product Management with AI")](https://rumble.com/v5kh5r6-accelerating-product-management-with-ai.html)
 
 The author has found that the AI is more likely to provide a useful response if the request for work item definition or
 review is:
