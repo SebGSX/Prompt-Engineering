@@ -163,6 +163,9 @@ Using ChatGPT's GPT-4o model, Tim can also deal with handwritten notes like the 
 
 ![Handwritten Note](content/Handwritten-Note.png "Handwritten Note")
 
+For convenience, the link to the exact file demonstrated in the video is provided here:
+[ListenerThread.cs](https://github.com/SebGSX/Prompt-Engineering/blob/main/src/OptimizedInternals/Threading/ListenerThread.cs).
+
 Given that Tim, the AI product manager, is designed to deal with a broad range of techniques, practices, frameworks, 
 etc., requests to Tim must be quite specific. To aid the reader, an example of such a request is provided below. 
 Once the Tim prompt has been loaded, the following request should produce a useful response:
