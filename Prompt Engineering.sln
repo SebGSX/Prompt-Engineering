@@ -31,6 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{E416
 	ProjectSection(SolutionItems) = preProject
 		content\Handwritten-Note.png = content\Handwritten-Note.png
 		content\Thumbnail-Tim.jpg = content\Thumbnail-Tim.jpg
+		content\Thumbnail-Tom.jpg = content\Thumbnail-Tom.jpg
 	EndProjectSection
 EndProject
 Global
