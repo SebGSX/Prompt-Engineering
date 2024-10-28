@@ -69,9 +69,9 @@ without needing to train a model from scratch or fine-tune an existing one.
 
 ### Getting Started with Tom (Principal Developer)
 
-For a quick five-minute introduction to Tom, the principal developer, see the video below.
+For a quick five-minute introduction to Tom, the AI principal developer, see the video below.
 
-[![AI Pull Request Reviewer](content/Thumbnail.jpg)](https://rumble.com/v5j1zrx-ai-pull-request-reviewer.html)
+[![AI Pull Request Reviewer](content/Thumbnail.jpg "AI Pull Request Reviewer")](https://rumble.com/v5j1zrx-ai-pull-request-reviewer.html)
 
 The author has found that the AI is more likely to provide a useful response if the code is:
 - Well-formatted;
@@ -129,6 +129,46 @@ been developed without the benefit of a product manager. Doing so can help to en
 and well-understood, guarding against issue regression and loss of knowledge. Back-filling work items is also a key
 concern when implementing behaviour-driven development (BDD) or test-driven development (TDD) practices because the
 team needs to have a clear understanding of the system's required behaviour and functionality.
+
+#### Sample Work Item Content to Test Tim
+
+The following table comprises an epic, five features, and 9 enabler and user stories in short form so that Tim has 
+material to use as a starting point for generating work items.
+
+| Work Item Type  | Work Item Text                                                                                                                   |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Epic            | Identity and Access Management for App                                                                                           |
+| Feature         | Sign-Up/Close Account                                                                                                            |
+| Feature         | Sign-In/Sign-Out                                                                                                                 |
+| Feature         | Forgot Username/Password                                                                                                         |
+| Feature         | Change Security Info (Password, email, phone, etc.)                                                                              |
+| Feature         | Manage Account (Profile, preferences, etc.)                                                                                      |
+| User Story      | **I can** sign up with my name, email address, and password **so that** I can access the app.                                    |
+| User Story      | **I can** close my account **so that** my personal information is removed from the system.                                       |
+| User Story      | **I can** get feedback on sign-up errors **so that** I can correct those errors and sign up successfully.                        |
+| User Story      | **I can** receive an activation email **so that** I can confirm that my sign-up is legitimate and thus use the app unrestricted. |
+| User Story      | **I can** sign-in with my username and password **so that** I can access my account.                                             |
+| Enabler Story   | An e-mailer is needed to send emails.                                                                                            |
+| Enabler Story   | Encryption is needed for data in use, in transit, and at rest.                                                                   |
+| Enabler Story   | Forms must be added for sign-up functionality to be surfaced to users.                                                           |
+| Enabler Story   | Forms must be added for close account functionality to be surfaced to users.                                                     |
+
+> Note that the text above is in simple "I can <some-action> so that <some-benefit>" format.
+
+Using ChatGPT's GPT-4o model, Tim can also deal with handwritten notes like the sample below.
+
+![Handwritten Note](content/Handwritten-Note.png "Handwritten Note")
+
+Given that Tim, the AI product manager, is designed to deal with a broad range of techniques, practices, frameworks, 
+etc., requests to Tim must be quite specific. To aid the reader, an example of such a request is provided below. 
+Once the Tim prompt has been loaded, the following request should produce a useful response:
+
+> Thank you! Here is my first user story that needs to be prepared in accordance with Scaled Agile Framework's
+> guidance for version 6. My team uses test-driven development with a view to progressing towards behaviour-driven
+> development. As such, Gherkin acceptance criteria will be needed. Accordingly, please may you draft the user story
+> with the appropriate pidgin, the description, the benefit, and the Gherkin acceptance criteria?
+>
+> I can sign up with my name, email address, and password so that I can access the app.
 
 ## Contributing
 
