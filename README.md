@@ -1,5 +1,7 @@
 # Prompt Engineering
 
+![.NET](https://github.com/github/SebGSX/Prompt-Engineering/actions/workflows/dotnet.yml/badge.svg)
+
 ## Overview
 
 This project is a production-ready implementation of two prompts that are used to configure ChatGPT to serve as a
