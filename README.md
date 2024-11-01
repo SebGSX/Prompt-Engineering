@@ -1,6 +1,9 @@
 # Prompt Engineering
 
-![.NET](https://github.com/github/SebGSX/Prompt-Engineering/actions/workflows/dotnet.yml/badge.svg)
+[![dotnet.yml](https://github.com/SebGSX/Prompt-Engineering/workflows/dotnet.yml/badge.svg)](https://github.com/SebGSX/Prompt-Engineering/actions?query=workflow:"dotnet.yml")
+[![GitHub release](https://img.shields.io/github/release/SebGSX/Prompt-Engineering?include_prereleases=&sort=semver&color=blue)](https://github.com/SebGSX/Prompt-Engineering/releases/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+[![issues - Prompt-Engineering](https://img.shields.io/github/issues/SebGSX/Prompt-Engineering)](https://github.com/SebGSX/Prompt-Engineering/issues)
 
 ## Overview
 
@@ -186,7 +189,7 @@ feedback is appreciated. Please submit a pull request with your changes or an is
 
 ## License
 
-The project is licensed under the MIT License. Please see the `LICENSE` file for more information.
+Released under [MIT](/LICENSE) by [@SebGSX](https://github.com/SebGSX) (Seb Garrioch).
 
 ## Further Development
 
