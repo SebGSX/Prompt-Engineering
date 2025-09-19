@@ -1,4 +1,4 @@
-﻿// Copyright © 2024 Seb Garrioch. All rights reserved.
+﻿// Copyright © 2025 Seb Garrioch. All rights reserved.
 // Published under the MIT License.
 
 using Microsoft.Extensions.Logging;
