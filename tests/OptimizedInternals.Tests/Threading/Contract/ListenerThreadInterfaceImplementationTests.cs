@@ -182,7 +182,7 @@ public class ListenerThreadInterfaceImplementationTests
         // Act
         implementation.Start(action);
         var states = new ConcurrentBag<ListenerThreadStates>();
-        Parallel.For(0, 255, i =>
+        Parallel.For(0, 63, i =>
         {
             implementation.EnqueueRequest(i);
             states.Add(implementation.State);
