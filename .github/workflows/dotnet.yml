@@ -60,13 +60,13 @@ jobs:
       run: dotnet build --no-restore
 
     - name: "Test"
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./TestResults --logger "trx;LogFileName=testresults.trx" /p:CoverletOutputFormat=opencover /p:CoverletOutput="./TestResults/"
 
     - name: "Analyze with SonarQube Cloud"
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       shell: powershell
       run: |
-        ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"SebGSX_Prompt-Engineering" /o:"sebgsx" /d:sonar.token="$env:SONAR_TOKEN"
+        ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"SebGSX_Prompt-Engineering" /o:"sebgsx" /d:sonar.token="$env:SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/*.opencover.xml"
         dotnet build
         ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
