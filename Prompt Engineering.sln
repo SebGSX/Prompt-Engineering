@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		LICENSE = LICENSE
 		README.md = README.md
 		stryker-config.json = stryker-config.json
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizedInternals.Tests", "tests\OptimizedInternals.Tests\OptimizedInternals.Tests.csproj", "{41D3114A-30FC-4266-A61B-ECDEE6CD2B74}"
