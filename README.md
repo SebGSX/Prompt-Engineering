@@ -5,6 +5,18 @@
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 [![issues - Prompt-Engineering](https://img.shields.io/github/issues/SebGSX/Prompt-Engineering)](https://github.com/SebGSX/Prompt-Engineering/issues)
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=bugs)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=coverage)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=SebGSX_Prompt-Engineering&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=SebGSX_Prompt-Engineering)
+
 ## Overview
 
 This project is a production-ready implementation of two prompts that are used to configure ChatGPT to serve as a
@@ -23,7 +35,7 @@ feedback, so that work flows more smoothly through the system.
 
 While creating Tim was relatively straightforward, creating Tom was a highly complex proposition that required a
 suitably complex codebase upon which to "train" Tom. By train, I mean activate the prompt, provide Tom with code,
-then carefully review the output. The author thus created a multi-threaded listener using lock primitives to help
+then carefully review the output. The author thus created a multithreaded listener using lock primitives to help
 ensure that Tom had a sufficiently complex problem to solve. As the code evolved, so too did the prompt.
 
 > For reference, the author has included the codebase (with tests) used to train Tom in the `src` and `test` directories
