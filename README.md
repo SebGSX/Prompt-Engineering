@@ -196,8 +196,7 @@ Once the Tim prompt has been loaded, the following request should produce a usef
 
 ## Contributing
 
-Contributions are welcome as are corrections. The author follows Crocker's Rules. Direct, honest, and constructive
-feedback is appreciated. Please submit a pull request with your changes or an issue with your feedback.
+Please see [Contributing](https://github.com/SebGSX/Prompt-Engineering/blob/main/CONTRIBUTING.md) for details.
 
 ## License
 
