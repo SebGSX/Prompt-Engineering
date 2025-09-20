@@ -52,7 +52,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEM
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PULL_REQUEST_TEMPLATE", "PULL_REQUEST_TEMPLATE", "{4E148594-1C73-4FE2-9177-0D21D83C63CE}"
 	ProjectSection(SolutionItems) = preProject
-		.github\PULL_REQUEST_TEMPLATE\pull_request_template.md = .github\PULL_REQUEST_TEMPLATE\pull_request_template.md
+		.github\PULL_REQUEST_TEMPLATE\pull_request.md = .github\PULL_REQUEST_TEMPLATE\pull_request.md
 	EndProjectSection
 EndProject
 Global
