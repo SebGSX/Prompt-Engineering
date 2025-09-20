@@ -282,8 +282,8 @@ public sealed class ListenerThread<T> : IListenerThread<T>
 
         /*
          * Given that the worker thread will alternate between waiting on the data ready event and processing
-         * requests, we should only stop the worker thread when the listener thread is no longer needed or it is
-         * being reset. Under such circumstances, it is appropriate to wait for the worker thread to stop.
+         * requests, we should only stop the worker thread when: (i) the listener thread is no longer needed; or (ii)
+         * it is being reset. Under such circumstances, it is appropriate to wait for the worker thread to stop.
          */
 
         // Stryker disable once all

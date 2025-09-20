@@ -19,7 +19,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     Tests that <see cref="ListenerThread{T}.Dispose()" /> when invoked disposes the implementation.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -47,7 +47,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     exceptions.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -78,7 +78,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     the resources used by the implementation.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -110,7 +110,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     Tests that <see cref="ListenerThread{T}.EnqueueRequest(T)" /> processes the request.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -162,7 +162,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     Tests that <see cref="ListenerThread{T}.EnqueueRequest(T)" /> processes concurrent requests.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -177,7 +177,7 @@ public class ListenerThreadInterfaceImplementationTests
 
         var action = new Action<int, CancellationToken>(
             [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { Thread.SpinWait(GlobalTestParameters.DefaultThreadSpinWait); });
+            (i, ct) => { Thread.SpinWait(GlobalTestParameters.DefaultThreadSpinWait / 5); });
 
         // Act
         implementation.Start(action);
@@ -210,7 +210,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     when invoked after <see cref="ListenerThread{T}.Dispose()" />.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -241,7 +241,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     <see cref="ListenerThreadStates.Running" />.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -282,7 +282,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     Tests that <see cref="ListenerThread{T}.EnqueueRequest(T)" /> adds a request to the queue.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -340,7 +340,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     <see cref="ObjectDisposedException" /> when invoked after <see cref="ListenerThread{T}.Dispose()" />.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -373,7 +373,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     when a valid action is set.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -404,7 +404,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     when called.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -434,7 +434,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     <see cref="InvalidOperationException" /> when invoked repeatedly.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -470,7 +470,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     <see cref="InvalidOperationException" /> when invoked after <see cref="ListenerThread{T}.TryStop" />.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -501,7 +501,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     Tests that <see cref="ListenerThread{T}.TryReset()" /> when the listener thread is initialized returns false.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -526,7 +526,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     for reuse.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -565,7 +565,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     while the rest return false.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -601,7 +601,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     invoked after <see cref="ListenerThread{T}.Dispose()" />.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -630,7 +630,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     Tests that <see cref="ListenerThread{T}.TryStop()" /> stops the listener thread.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -653,7 +653,7 @@ public class ListenerThreadInterfaceImplementationTests
                 uint spinCount = 0;
 
                 /*
-                 * Simulate a long running thread; however, make sure it eventually stops so that the test can complete.
+                 * Simulate a long-running thread; however, make sure it eventually stops so that the test can complete.
                  * Without some way to terminate the loop, the test will waste compute resources until it times out or
                  * crashes. If the code being tested is incorrect, the OperationCancelledException will never be thrown
                  * meaning that we need the test to end the loop after a certain number of iterations.
@@ -695,7 +695,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     concurrently. Only the first successful invocation stops the listener thread while the rest return false.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -730,7 +730,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     Tests that <see cref="ListenerThread{T}.TryStop()" /> when called repeatedly does not throw any exceptions.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -765,7 +765,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     when invoked after <see cref="ListenerThread{T}.Dispose()" />.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -794,7 +794,7 @@ public class ListenerThreadInterfaceImplementationTests
     ///     Tests that <see cref="ListenerThread{T}.TryStop" /> will forcibly stop the listener thread if it has hung.
     /// </summary>
     /// <param name="implementation">The <see cref="IListenerThread{T}" /> implementation to test.</param>
-    /// <param name="loggerMock">The mock of the <see cref="ILogger" /> used to log messages.</param>
+    /// <param name="loggerMock">The mocked <see cref="ILogger" /> used to log messages.</param>
     /// <typeparam name="TLogger">The type of logger used by the implementation.</typeparam>
     [Theory]
     [Trait("Category", "Unit")]
@@ -820,7 +820,7 @@ public class ListenerThreadInterfaceImplementationTests
             {
                 actionInvoked = true;
                 /* Simulate a hung thread:
-                 * The parameter i will never equal 5, which is why the timeout is vital to avoid an infinite loop.
+                 * The parameter "i" will never equal 5, which is why the timeout is vital to avoid an infinite loop.
                  */
                 SpinWait.SpinUntil(
                     () => i.Equals(5),

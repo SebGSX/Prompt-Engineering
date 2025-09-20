@@ -26,11 +26,11 @@ public class ListenerThreadInterfaceImplementationTestData : IEnumerable<object[
     public IEnumerator<object[]> GetEnumerator()
     {
         var loggerMockListenerThread = new Mock<ILogger<ListenerThread<int>>>();
-        yield return new object[]
-        {
+        yield return
+        [
             new ListenerThread<int>(loggerMockListenerThread.Object),
             loggerMockListenerThread
-        };
+        ];
     }
 
     /// <summary>

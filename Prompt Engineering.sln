@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DCCD58BF-82B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizedInternals", "src\OptimizedInternals\OptimizedInternals.csproj", "{1EC1C012-952E-41AF-941F-7C23C41B654C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F016A60E-2E20-4EA6-9A1F-F178B8D2A041}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F016A60E-2E20-4EA6-9A1F-F178B8D2A041}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{B61E4AE6-3C5A-4C40-ADDE-ED8BDAA42C1D}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		SECURITY.md = SECURITY.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizedInternals.Tests", "tests\OptimizedInternals.Tests\OptimizedInternals.Tests.csproj", "{41D3114A-30FC-4266-A61B-ECDEE6CD2B74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizedInternals.UnitTests", "test\OptimizedInternals.UnitTests\OptimizedInternals.UnitTests.csproj", "{41D3114A-30FC-4266-A61B-ECDEE6CD2B74}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prompt-engineering", "prompt-engineering", "{AD2A7C2F-6C57-41F4-A131-E3C047854842}"
 	ProjectSection(SolutionItems) = preProject
