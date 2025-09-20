@@ -44,7 +44,7 @@ for design reviews`).
 
 ### Commit Guidelines
 
-Please follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) for commit messages.
+Please follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit messages.
 
 ## Intellectual Property
 
