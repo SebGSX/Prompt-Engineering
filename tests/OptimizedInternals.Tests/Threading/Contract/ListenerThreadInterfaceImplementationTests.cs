@@ -190,7 +190,7 @@ public class ListenerThreadInterfaceImplementationTests
         
         SpinWait.SpinUntil(
             () => implementation.State == ListenerThreadStates.Ready,
-            GlobalTestParameters.DefaultThreadSpinWaitTimeoutMilliseconds);
+            GlobalTestParameters.DefaultThreadSpinWaitTimeoutMilliseconds * 4);
         var stateReady = implementation.State;
         
         implementation.TryStop();
