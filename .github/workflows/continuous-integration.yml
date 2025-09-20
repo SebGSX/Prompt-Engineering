@@ -15,7 +15,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  job1:
+    name: "Build, Test, and Analyze"
     runs-on: windows-latest
     steps:
     - name: "Checkout Repository"
