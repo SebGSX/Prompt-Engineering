@@ -36,11 +36,17 @@ for design reviews`).
 6. Update documentation (e.g., README.md) if changes impact usage.
 7. Submit the pull request with a detailed description, referencing related issues.
 
-### Style Guidelines
+### Style and Conventions
 
 - *Prompts:* Use clear, structured Markdown; limit domain to ensure probabilistic accuracy.
 - *Code:* Adhere to standard linters (e.g., PEP8 for Python); prioritize readability and efficiency.
 - *Documentation:* Formal tone; emphasize accountability, policy compliance, and AI limitations.
+
+## Intellectual Property
+
+By contributing, you agree that your contributions are your original work and do not infringe on any third-party
+intellectual property rights. You grant the project maintainers a perpetual, worldwide, non-exclusive, royalty-free 
+license to use, modify, and distribute your contributions.
 
 ## Review Process
 Contributions are reviewed for alignment with the project's focus on accelerating high-quality work while 
