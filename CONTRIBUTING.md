@@ -42,6 +42,10 @@ for design reviews`).
 - *Code:* Adhere to standard linters (e.g., PEP8 for Python); prioritize readability and efficiency.
 - *Documentation:* Formal tone; emphasize accountability, policy compliance, and AI limitations.
 
+### Commit Guidelines
+
+Please follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) for commit messages.
+
 ## Intellectual Property
 
 By contributing, you agree that your contributions are your original work and do not infringe on any third-party
