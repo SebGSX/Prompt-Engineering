@@ -1,6 +1,6 @@
 # Prompt Engineering
 
-[![.NET](https://github.com/SebGSX/Prompt-Engineering/workflows/.NET/badge.svg)](https://github.com/SebGSX/Prompt-Engineering/actions?query=workflow:".NET")
+[![Optimized Internals (CI)](https://github.com/SebGSX/Prompt-Engineering/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/SebGSX/Prompt-Engineering/actions/workflows/continuous-integration.yml)
 [![GitHub tag](https://img.shields.io/github/tag/SebGSX/Prompt-Engineering?include_prereleases=&sort=semver&color=blue)](https://github.com/SebGSX/Prompt-Engineering/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 [![issues - Prompt-Engineering](https://img.shields.io/github/issues/SebGSX/Prompt-Engineering)](https://github.com/SebGSX/Prompt-Engineering/issues)
