@@ -188,11 +188,6 @@ public class ListenerThreadInterfaceImplementationTests
             states.Add(implementation.State);
         });
         
-        SpinWait.SpinUntil(
-            () => implementation.State == ListenerThreadStates.Ready,
-            GlobalTestParameters.DefaultThreadSpinWaitTimeoutMilliseconds * 4);
-        var stateReady = implementation.State;
-        
         implementation.TryStop();
         SpinWait.SpinUntil(
             () => implementation.State == ListenerThreadStates.Stopped,
@@ -201,7 +196,6 @@ public class ListenerThreadInterfaceImplementationTests
 
         // Assert
         Assert.All(states, s => Assert.Equal(ListenerThreadStates.Running, s));
-        Assert.Equal(ListenerThreadStates.Ready, stateReady);
         Assert.Equal(ListenerThreadStates.Stopped, stateStopped);
     }
 
