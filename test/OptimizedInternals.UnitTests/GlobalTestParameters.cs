@@ -25,7 +25,7 @@ public static class GlobalTestParameters
     ///     The default thread spin wait cycles.
     /// </summary>
     public const ushort DefaultThreadSpinWait = 1000;
-    
+
     /// <summary>
     ///     The default thread spin wait timeout in milliseconds.
     /// </summary>

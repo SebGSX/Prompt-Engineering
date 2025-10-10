@@ -21,13 +21,12 @@ public static class ArrangeHelper
         where TLogger : class, ILogger
     {
         var logInvocationArguments = new List<Tuple<LogLevel, object?, Exception?>>();
-        loggerMock.Setup(
-                m => m.Log(
-                    It.IsAny<LogLevel>(),
-                    It.IsAny<EventId>(),
-                    It.IsAny<It.IsAnyType>(),
-                    It.IsAny<Exception?>(),
-                    It.IsAny<Func<It.IsAnyType, Exception?, string>>()))
+        loggerMock.Setup(m => m.Log(
+                It.IsAny<LogLevel>(),
+                It.IsAny<EventId>(),
+                It.IsAny<It.IsAnyType>(),
+                It.IsAny<Exception?>(),
+                It.IsAny<Func<It.IsAnyType, Exception?, string>>()))
             .Callback(new InvocationAction(invocation =>
             {
                 logInvocationArguments.Add(

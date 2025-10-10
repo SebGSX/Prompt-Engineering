@@ -59,9 +59,11 @@ public class ListenerThreadInterfaceImplementationTests
     {
         // Arrange
         loggerMock.Reset();
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { Thread.SpinWait(GlobalTestParameters.DefaultThreadSpinWait); });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) =>
+            {
+                Thread.SpinWait(GlobalTestParameters.DefaultThreadSpinWait);
+            });
         implementation.Start(action);
         for (var i = 0; i < 100; i++) implementation.EnqueueRequest(i);
 
@@ -90,9 +92,11 @@ public class ListenerThreadInterfaceImplementationTests
     {
         // Arrange
         loggerMock.Reset();
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { Thread.SpinWait(GlobalTestParameters.DefaultThreadSpinWait); });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) =>
+            {
+                Thread.SpinWait(GlobalTestParameters.DefaultThreadSpinWait);
+            });
         implementation.Start(action);
         for (var i = 0; i < 100; i++) implementation.EnqueueRequest(i);
 
@@ -124,9 +128,8 @@ public class ListenerThreadInterfaceImplementationTests
         loggerMock.Reset();
         var result = 0;
 
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) =>
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) =>
             {
                 result = i * 2;
                 Thread.SpinWait(GlobalTestParameters.DefaultLoopWaitTime);
@@ -139,12 +142,12 @@ public class ListenerThreadInterfaceImplementationTests
         var stateRunningActivated = SpinWait.SpinUntil(
             () => implementation.State == ListenerThreadStates.Running,
             GlobalTestParameters.DefaultThreadSpinWaitTimeoutMilliseconds);
-        
+
         SpinWait.SpinUntil(
             () => implementation.State == ListenerThreadStates.Ready,
             GlobalTestParameters.DefaultThreadSpinWaitTimeoutMilliseconds);
         var stateReady = implementation.State;
-        
+
         implementation.TryStop();
         SpinWait.SpinUntil(
             () => implementation.State == ListenerThreadStates.Stopped,
@@ -175,9 +178,11 @@ public class ListenerThreadInterfaceImplementationTests
         // Arrange
         loggerMock.Reset();
 
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { Thread.SpinWait(GlobalTestParameters.DefaultThreadSpinWait / 5); });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) =>
+            {
+                Thread.SpinWait(GlobalTestParameters.DefaultThreadSpinWait / 5);
+            });
 
         // Act
         implementation.Start(action);
@@ -187,7 +192,7 @@ public class ListenerThreadInterfaceImplementationTests
             implementation.EnqueueRequest(i);
             states.Add(implementation.State);
         });
-        
+
         implementation.TryStop();
         SpinWait.SpinUntil(
             () => implementation.State == ListenerThreadStates.Stopped,
@@ -249,9 +254,8 @@ public class ListenerThreadInterfaceImplementationTests
         loggerMock.Reset();
         const string expectedExceptionMessage = "Cannot enqueue a request while the thread is not ready or running.";
 
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) => { });
 
         // Act
         var stateInitialized = implementation.State;
@@ -293,19 +297,19 @@ public class ListenerThreadInterfaceImplementationTests
         const string expectedErrorLogMessage = "An exception occurred while processing a request.";
         const string expectedExceptionMessage = "Testing exception logging.";
 
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => throw new InvalidOperationException(expectedExceptionMessage));
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) =>
+                throw new InvalidOperationException(expectedExceptionMessage));
 
         // Act
         implementation.Start(action);
         implementation.EnqueueRequest(1);
-        
+
         SpinWait.SpinUntil(
             () => implementation.State == ListenerThreadStates.Ready,
             GlobalTestParameters.DefaultThreadSpinWaitTimeoutMilliseconds);
         var stateReady = implementation.State;
-        
+
         implementation.TryStop();
         SpinWait.SpinUntil(
             () => implementation.State == ListenerThreadStates.Stopped,
@@ -348,9 +352,8 @@ public class ListenerThreadInterfaceImplementationTests
         loggerMock.Reset();
         implementation.Dispose();
         var state = implementation.State;
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) => { });
 
         // Act
         var exception = (ObjectDisposedException)Record.Exception(() => implementation.Start(action))!;
@@ -379,9 +382,8 @@ public class ListenerThreadInterfaceImplementationTests
     {
         // Arrange
         loggerMock.Reset();
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) => { });
 
         // Act
         var exception = Record.Exception(() => implementation.Start(action));
@@ -443,9 +445,8 @@ public class ListenerThreadInterfaceImplementationTests
 
         const string expectedExceptionMessage = "Cannot start the listener thread unless it is the initialized state.";
 
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) => { });
 
         // Act
         implementation.Start(action);
@@ -477,9 +478,8 @@ public class ListenerThreadInterfaceImplementationTests
         // Arrange
         loggerMock.Reset();
 
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) => { });
 
         // Act
         implementation.Start(action);
@@ -532,9 +532,8 @@ public class ListenerThreadInterfaceImplementationTests
     {
         // Arrange
         loggerMock.Reset();
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) => { });
         implementation.Start(action);
 
         // Act
@@ -571,9 +570,8 @@ public class ListenerThreadInterfaceImplementationTests
     {
         // Arrange
         loggerMock.Reset();
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) => { });
         implementation.Start(action);
         const uint expectedIterations = 100;
 
@@ -640,9 +638,8 @@ public class ListenerThreadInterfaceImplementationTests
 
         const string expectedCancellationLogMessage = "Error: Worker thread cancelled.";
 
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) =>
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) =>
             {
                 uint spinCount = 0;
 
@@ -701,9 +698,8 @@ public class ListenerThreadInterfaceImplementationTests
     {
         // Arrange
         loggerMock.Reset();
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) => { });
         implementation.Start(action);
         const uint expectedIterations = 100;
 
@@ -736,9 +732,8 @@ public class ListenerThreadInterfaceImplementationTests
     {
         // Arrange
         loggerMock.Reset();
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) => { });
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) => { });
         implementation.Start(action);
 
         // Act
@@ -808,9 +803,8 @@ public class ListenerThreadInterfaceImplementationTests
         const string expectedErrorLogMessage = "Thread interrupted while processing a request.";
 
         var actionInvoked = false;
-        var action = new Action<int, CancellationToken>(
-            [ExcludeFromCodeCoverage(Justification = "Test method.")]
-            (i, ct) =>
+        var action =
+            new Action<int, CancellationToken>([ExcludeFromCodeCoverage(Justification = "Test method.")](i, ct) =>
             {
                 actionInvoked = true;
                 /* Simulate a hung thread:
@@ -830,7 +824,7 @@ public class ListenerThreadInterfaceImplementationTests
         SpinWait.SpinUntil(
             () => actionInvoked,
             GlobalTestParameters.DefaultThreadSpinWaitTimeoutMilliseconds);
-        
+
         var result = implementation.TryStop();
         var stateStopped = implementation.State;
 

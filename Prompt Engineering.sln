@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizedInternals", "src\O
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F016A60E-2E20-4EA6-9A1F-F178B8D2A041}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{B61E4AE6-3C5A-4C40-ADDE-ED8BDAA42C1D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supporting Files", "Supporting Files", "{B61E4AE6-3C5A-4C40-ADDE-ED8BDAA42C1D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		LICENSE = LICENSE

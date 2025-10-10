@@ -20,14 +20,14 @@
 ## Overview
 
 This project is a production-ready implementation of two prompts that are used to configure ChatGPT to serve as a
-principal developer for pull request review support 
+principal developer for pull request review support
 ([Tom](https://github.com/SebGSX/Prompt-Engineering/blob/main/prompt-engineering/pull-request-review.md)) and a product
 manager ([Tim](https://github.com/SebGSX/Prompt-Engineering/blob/main/prompt-engineering/work-item-review.md)). The
 prompts have been exhaustively developed and tested over a period of about a year.
 
 ### Objective
 
-The primary objective of the project is to accelerate the delivery of high-quality work product. In other words, 
+The primary objective of the project is to accelerate the delivery of high-quality work product. In other words,
 faster and higher quality first drafts of work, faster and higher quality reviews, and faster and higher quality
 feedback, so that work flows more smoothly through the system.
 
@@ -56,7 +56,8 @@ of standing instructions that are used to guide the AI in its all of its respons
 that more accurate and in-depth responses are generated.
 
 The author has experimented with a variety of custom instructions over the past year to 18 months and has found that the
-set provided within the [AI Custom Instructions](https://github.com/SebGSX/AI-Custom-Instructions) repository is the most effective.
+set provided within the [AI Custom Instructions](https://github.com/SebGSX/AI-Custom-Instructions) repository is the
+most effective.
 
 > **Note:** The custom instructions do evolve and are thus subject to change. Given the experimental nature of the work
 > the custom instructions are sometimes suboptimal and may contain errors or out-of-the-box thinking.
@@ -73,15 +74,15 @@ style guides, policies, and other documentation can be included to help guide th
 approach is known as retrieval-augmented generation (RAG) and is a powerful tool for creating highly specialised AIs
 without needing to train a model from scratch or fine-tune an existing one.
 
-> **Important:** You MUST ensure that your organisation's policies and procedures are followed when using the 
+> **Important:** You MUST ensure that your organisation's policies and procedures are followed when using the
 > prompts and any AI service in general. There are legitimate risks associated with using AI in a professional context,
 > including but not limited to: copyright infringement, data leakage, intellectual property theft, and more. Make
 > sure that any AI service you use is approved, compliant with your organisation's policies, and that you have the
 > necessary authorisations to use it. The author cannot and will not be held responsible for any misuse of the
 > prompts or any AI service.
 
-> **Note:** The author uses ChatGPT Team for all AI-related work. ChatGPT Team is a paid service that meets the 
-> author's copyright, data, and intellectual property protection requirements. As at the time of writing, the author 
+> **Note:** The author uses ChatGPT Team for all AI-related work. ChatGPT Team is a paid service that meets the
+> author's copyright, data, and intellectual property protection requirements. As at the time of writing, the author
 > has no affiliation with OpenAI or any other AI service provider.
 
 ### Getting Started with Tom (Principal Developer)
@@ -91,12 +92,13 @@ For a quick five-minute introduction to Tom, the AI principal developer, see the
 [![AI Pull Request Reviewer](content/Thumbnail-Tom.jpg "AI Pull Request Reviewer")](https://rumble.com/v5j1zrx-ai-pull-request-reviewer.html)
 
 The author has found that the AI is more likely to provide a useful response if the code is:
+
 - Well-formatted;
 - Free of syntax errors;
 - Complete, as in share the entire file or files that are to be reviewed;
 - Clearly documented and annotated using domain-appropriate and precise, professional language in formal register;
 - Compliant with applicable coding standards and conventions; and
-- Mindful of naming such as the naming of namespaces, classes, methods, fields, properties, constants, and variables 
+- Mindful of naming such as the naming of namespaces, classes, methods, fields, properties, constants, and variables
   are meaningful and descriptive.
 
 > **Note:** The guidance above can be generalised to any technical prompt for best results.
@@ -125,6 +127,7 @@ For a quick eight-minute introduction to Tim, the AI product manager, see the vi
 
 The author has found that the AI is more likely to provide a useful response if the request for work item definition or
 review is:
+
 - Well-formatted;
 - Specific and detailed--be sure to mention frameworks like SAFe or practices like TDD or BDD;
 - Includes all necessary information;
@@ -153,26 +156,26 @@ team needs to have a clear understanding of the system's required behaviour and 
 
 #### Sample Work Item Content to Test Tim
 
-The following table comprises an epic, five features, and 9 enabler and user stories in short form so that Tim has 
+The following table comprises an epic, five features, and 9 enabler and user stories in short form so that Tim has
 material to use as a starting point for generating work items.
 
-| Work Item Type  | Work Item Text                                                                                                                   |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Epic            | Identity and Access Management for App                                                                                           |
-| Feature         | Sign-Up/Close Account                                                                                                            |
-| Feature         | Sign-In/Sign-Out                                                                                                                 |
-| Feature         | Forgot Username/Password                                                                                                         |
-| Feature         | Change Security Info (Password, email, phone, etc.)                                                                              |
-| Feature         | Manage Account (Profile, preferences, etc.)                                                                                      |
-| User Story      | **I can** sign up with my name, email address, and password **so that** I can access the app.                                    |
-| User Story      | **I can** close my account **so that** my personal information is removed from the system.                                       |
-| User Story      | **I can** get feedback on sign-up errors **so that** I can correct those errors and sign up successfully.                        |
-| User Story      | **I can** receive an activation email **so that** I can confirm that my sign-up is legitimate and thus use the app unrestricted. |
-| User Story      | **I can** sign-in with my username and password **so that** I can access my account.                                             |
-| Enabler Story   | An e-mailer is needed to send emails.                                                                                            |
-| Enabler Story   | Encryption is needed for data in use, in transit, and at rest.                                                                   |
-| Enabler Story   | Forms must be added for sign-up functionality to be surfaced to users.                                                           |
-| Enabler Story   | Forms must be added for close account functionality to be surfaced to users.                                                     |
+| Work Item Type | Work Item Text                                                                                                                   |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Epic           | Identity and Access Management for App                                                                                           |
+| Feature        | Sign-Up/Close Account                                                                                                            |
+| Feature        | Sign-In/Sign-Out                                                                                                                 |
+| Feature        | Forgot Username/Password                                                                                                         |
+| Feature        | Change Security Info (Password, email, phone, etc.)                                                                              |
+| Feature        | Manage Account (Profile, preferences, etc.)                                                                                      |
+| User Story     | **I can** sign up with my name, email address, and password **so that** I can access the app.                                    |
+| User Story     | **I can** close my account **so that** my personal information is removed from the system.                                       |
+| User Story     | **I can** get feedback on sign-up errors **so that** I can correct those errors and sign up successfully.                        |
+| User Story     | **I can** receive an activation email **so that** I can confirm that my sign-up is legitimate and thus use the app unrestricted. |
+| User Story     | **I can** sign-in with my username and password **so that** I can access my account.                                             |
+| Enabler Story  | An e-mailer is needed to send emails.                                                                                            |
+| Enabler Story  | Encryption is needed for data in use, in transit, and at rest.                                                                   |
+| Enabler Story  | Forms must be added for sign-up functionality to be surfaced to users.                                                           |
+| Enabler Story  | Forms must be added for close account functionality to be surfaced to users.                                                     |
 
 > Note that the text above is in simple "I can <some-action> so that <some-benefit>" format.
 
@@ -183,8 +186,8 @@ Using ChatGPT's GPT-4o model, Tim can also deal with handwritten notes like the 
 For convenience, the link to the exact file demonstrated in the video is provided here:
 [ListenerThread.cs](https://github.com/SebGSX/Prompt-Engineering/blob/main/src/OptimizedInternals/Threading/ListenerThread.cs).
 
-Given that Tim, the AI product manager, is designed to deal with a broad range of techniques, practices, frameworks, 
-etc., requests to Tim must be quite specific. To aid the reader, an example of such a request is provided below. 
+Given that Tim, the AI product manager, is designed to deal with a broad range of techniques, practices, frameworks,
+etc., requests to Tim must be quite specific. To aid the reader, an example of such a request is provided below.
 Once the Tim prompt has been loaded, the following request should produce a useful response:
 
 > Thank you! Here is my first user story that needs to be prepared in accordance with Scaled Agile Framework's

@@ -19,58 +19,58 @@ jobs:
     name: "Build, Test, and Analyze"
     runs-on: windows-latest
     steps:
-    - name: "Checkout Repository"
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: "Set up JDK 17"
-      uses: actions/setup-java@v4
-      with:
-        java-version: 17
-        distribution: "zulu"
+      - name: "Set up JDK 17"
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: "zulu"
 
-    - name: "Setup .NET 9.0 SDK"
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 9.0.x
+      - name: "Setup .NET 9.0 SDK"
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
 
-    - name: "Restore Dependencies"
-      run: dotnet restore
+      - name: "Restore Dependencies"
+        run: dotnet restore
 
-    - name: "Cache SonarQube Cloud Packages"
-      uses: actions/cache@v4
-      with:
-        path: ~\sonar\cache
-        key: ${{ runner.os }}-sonar
-        restore-keys: ${{ runner.os }}-sonar
+      - name: "Cache SonarQube Cloud Packages"
+        uses: actions/cache@v4
+        with:
+          path: ~\sonar\cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
 
-    - name: "Cache SonarQube Cloud Scanner"
-      id: cache-sonar-scanner
-      uses: actions/cache@v4
-      with:
-        path: ${{ runner.temp }}\scanner
-        key: ${{ runner.os }}-sonar-scanner
-        restore-keys: ${{ runner.os }}-sonar-scanner
+      - name: "Cache SonarQube Cloud Scanner"
+        id: cache-sonar-scanner
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}\scanner
+          key: ${{ runner.os }}-sonar-scanner
+          restore-keys: ${{ runner.os }}-sonar-scanner
 
-    - name: "Install SonarQube Cloud Scanner"
-      if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-      shell: powershell
-      run: |
-        New-Item -Path ${{ runner.temp }}\scanner -ItemType Directory
-        dotnet tool update dotnet-sonarscanner --tool-path ${{ runner.temp }}\scanner
+      - name: "Install SonarQube Cloud Scanner"
+        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+        shell: powershell
+        run: |
+          New-Item -Path ${{ runner.temp }}\scanner -ItemType Directory
+          dotnet tool update dotnet-sonarscanner --tool-path ${{ runner.temp }}\scanner
 
-    - name: "Build"
-      run: dotnet build --no-restore
+      - name: "Build"
+        run: dotnet build --no-restore
 
-    - name: "Test"
-      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage;Format=opencover" --results-directory ./TestResults --logger "trx;LogFileName=testresults.trx"
+      - name: "Test"
+        run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage;Format=opencover" --results-directory ./TestResults --logger "trx;LogFileName=testresults.trx"
 
-    - name: "Analyze with SonarQube Cloud"
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      shell: powershell
-      run: |
-        ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"SebGSX_Prompt-Engineering" /o:"sebgsx" /d:sonar.token="$env:SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/*.opencover.xml"
-        dotnet build
-        ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
+      - name: "Analyze with SonarQube Cloud"
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        shell: powershell
+        run: |
+          ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"SebGSX_Prompt-Engineering" /o:"sebgsx" /d:sonar.token="$env:SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/*.opencover.xml"
+          dotnet build
+          ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"

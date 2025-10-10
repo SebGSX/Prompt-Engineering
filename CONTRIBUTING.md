@@ -38,5 +38,6 @@ intellectual property rights. You grant the project maintainers a perpetual, wor
 license to use, modify, and distribute your contributions.
 
 ## Review Process
+
 Contributions are reviewed for alignment with the project's focus on accelerating high-quality work while
 maintaining human oversight and responsibility.
